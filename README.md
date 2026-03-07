@@ -9,6 +9,9 @@ while :; do sleep 1; lsblk -Jo RM,VENDOR | jq -r '.blockdevices[] | select(.rm =
 ```bash 3.
 while :; do ssh 127.0.0.1 -p 22 'pbpaste 2>/dev/null || xclip -selection clipboard -o -display :0 2>/dev/null || wl-paste 2>/dev/null || powershell -NoProfile -Command "Get-Clipboard"' | { xclip -selection clipboard 2>/dev/null || wl-copy 2>/dev/null; }; done # Constantly copies clipboard contents of remote machine to the local machine.
 ```
+```bash 4.
+__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia
+```
 
 ## Windows
 
