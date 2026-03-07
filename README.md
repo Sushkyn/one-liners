@@ -13,7 +13,7 @@ while :; do ssh 127.0.0.1 -p 22 'pbpaste 2>/dev/null || xclip -selection clipboa
 __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia
 ```
 ```bash 5.
-echo 1 | sudo tee /sys/bus/platform/drivers/*/*/conservation_mode
+echo 1 | tee /sys/bus/platform/drivers/*/*/conservation_mode
 ```
 
 ## Windows
