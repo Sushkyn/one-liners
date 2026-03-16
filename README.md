@@ -17,7 +17,7 @@ __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia
 echo 1 | tee /sys/bus/platform/drivers/*/*/conservation_mode
 ```
 ```bash 7.
- python3 -m http.server -p 8000
+ python3 -m http.server 8000
 ```
 ## Windows
 
