@@ -1,8 +1,7 @@
 ## Linux
 
 ```bash 1.
-while :; do printf "> "; read c; $c > /dev/pts/1; done # Constantly reads input and executes command, redirecting output to the terminal.
-```
+ssh user@remote 'bash -c "while :; do printf \"> \"; read c; \$c > /dev/pts/1; done"'```
 ```bash 2.
 while :; do sleep 1; lsblk -Jo RM,VENDOR | jq -r '.blockdevices[] | select(.rm == true) | select(.vendor != null) | .vendor' | { read -r line || shutdown now; } done # Simple USB Kill Switch; in this case, it shuts down the system.
 ```
